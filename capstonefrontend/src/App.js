@@ -12,9 +12,9 @@ function App() {
 		firebase.initializeApp(firebaseConfig);
 	} else {
 		firebase.app(); // if already initialized, use that one
-		login();
 		console.log('in firebase.apps else statement');
 	}
+	login();
 
 	return (
 		<div className='App'>
