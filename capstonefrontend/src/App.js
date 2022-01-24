@@ -1,3 +1,4 @@
+import React, { useContext, useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import firebaseConfig from './Config/Firebase';
@@ -5,7 +6,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/analytics';
 import 'firebase/firestore';
-
+import { MainComponent } from './Components/MainComponent.js';
+import { MainContextProvider } from './ContextConfig/MainContext.js';
 function App() {
 	if (!firebase.apps.length) {
 		console.log('in firebase.apps.length');
@@ -15,13 +17,12 @@ function App() {
 		console.log('in firebase.apps else statement');
 	}
 	login();
-
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-			</header>
-		</div>
+		<MainContextProvider>
+			<div className='App'>
+				<MainComponent />
+			</div>
+		</MainContextProvider>
 	);
 }
 
