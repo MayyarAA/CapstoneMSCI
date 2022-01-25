@@ -8,6 +8,8 @@ import 'firebase/analytics';
 import 'firebase/firestore';
 import { MainComponent } from './Components/MainComponent.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
+import { HomePage } from './Pages/HomePage.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
 	if (!firebase.apps.length) {
 		console.log('in firebase.apps.length');
@@ -19,9 +21,13 @@ function App() {
 	login();
 	return (
 		<MainContextProvider>
-			<div className='App'>
-				<MainComponent />
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path='/homepage' element={<HomePage />} />
+					<Route path='/main' element={<MainComponent />} />
+				</Routes>
+			</BrowserRouter>
+			<div className='App'></div>
 		</MainContextProvider>
 	);
 }
