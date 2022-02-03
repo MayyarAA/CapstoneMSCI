@@ -22,21 +22,19 @@ function App() {
 	}
 	login();
 	return (
-		// <div>
-		// </div>
-		<MainContextProvider>
-			{/* <LoginComponent /> */}
-			<BrowserRouter>
-				<Routes>
-					<Route path='/home' element={<HomePage />} />
-					<Route path='/main' element={<MainComponent />} />
-					<Route path='/Login' element={<LoginPage />} />
-				</Routes>
-			</BrowserRouter>
-			<div className='App'>
-				<LoginComponent />
-			</div>
-		</MainContextProvider>
+		<div className='App'>
+			<MainContextProvider>
+				{/* <LoginComponent /> */}
+				<BrowserRouter>
+					<Routes>
+						<Route path='/home' element={<HomePage />} />
+						<Route path='/main' element={<MainComponent />} />
+						<Route path='/Login' element={<LoginPage />} />
+					</Routes>
+				</BrowserRouter>
+				{/* <LoginComponent /> */}
+			</MainContextProvider>
+		</div>
 	);
 }
 
