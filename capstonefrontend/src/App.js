@@ -11,8 +11,10 @@ import { SmartBookingToolbarComponent } from './Components/SmartBookingToolbarCo
 import { LoginPage } from './Pages/LoginPage.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
 import { HomePage } from './Pages/HomePage.js';
-import { ServiceProviderPrivatePage } from './Pages/ServiceProviderPrivatePage.js';
+import { ServiceProviderServicesPage } from './Pages/ServiceProviderPages/ServiceProviderServicesPage.js';
+import { ServiceProviderPrivatePage } from './Pages/ServiceProviderPages/ServiceProviderPrivatePage.js';
 import { AddServicesPage } from './Pages/AddServicesPage.js';
+import { SearchPage } from './Pages/SearchPages/SearchPage.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
 	if (!firebase.apps.length) {
@@ -32,9 +34,14 @@ function App() {
 				{/* <LoginComponent /> */}
 				<BrowserRouter>
 					<Routes>
+						<Route path='/Search' element={<SearchPage />} />
 						<Route
 							path='/ServiceProviderPrivatePage'
 							element={<ServiceProviderPrivatePage />}
+						/>
+						<Route
+							path='/ServiceProviderallservices'
+							element={<ServiceProviderServicesPage />}
 						/>
 						<Route path='/home' element={<HomePage />} />
 						<Route path='/main' element={<MainComponent />} />

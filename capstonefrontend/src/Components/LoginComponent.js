@@ -5,7 +5,7 @@ import { Grid, Box, TextField, Button, Typography } from '@mui/material/';
 import loginpageiconv1 from '../images/loginpageiconv1.png';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
-import { ServiceProviderPrivatePage } from '../Pages/ServiceProviderPrivatePage.js';
+import { ServiceProviderPrivatePage } from '../Pages/ServiceProviderPages/ServiceProviderPrivatePage.js';
 import '../App.css';
 const smartBookingText = <Typography variant='h6'>SmartBooking</Typography>;
 const BusinessAccountText = <Typography variant='h3'>Business Account</Typography>;
