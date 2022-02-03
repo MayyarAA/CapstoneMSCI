@@ -7,10 +7,11 @@ import 'firebase/auth';
 import 'firebase/analytics';
 import 'firebase/firestore';
 import { MainComponent } from './Components/MainComponent.js';
-import { LoginComponent } from './Components/LoginComponent.js';
+import { SmartBookingToolbarComponent } from './Components/SmartBookingToolbarComponent.js';
 import { LoginPage } from './Pages/LoginPage.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
 import { HomePage } from './Pages/HomePage.js';
+import { AddServicesPage } from './Pages/AddServicesPage.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
 	if (!firebase.apps.length) {
@@ -25,6 +26,7 @@ function App() {
 		// <div>
 		// </div>
 		<div className='App'>
+			<SmartBookingToolbarComponent />
 			<MainContextProvider>
 				{/* <LoginComponent /> */}
 				<BrowserRouter>
@@ -32,6 +34,7 @@ function App() {
 						<Route path='/home' element={<HomePage />} />
 						<Route path='/main' element={<MainComponent />} />
 						<Route path='/Login' element={<LoginPage />} />
+						<Route path='/AddServices' element={<AddServicesPage />} />
 					</Routes>
 				</BrowserRouter>
 			</MainContextProvider>
