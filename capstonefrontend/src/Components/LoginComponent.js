@@ -4,6 +4,8 @@ import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import { Grid, Box, TextField, Button, Typography } from '@mui/material/';
 import loginpageiconv1 from '../images/loginpageiconv1.png';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
+import { ServiceProviderPrivatePage } from '../Pages/ServiceProviderPrivatePage.js';
 import '../App.css';
 const smartBookingText = <Typography variant='h6'>SmartBooking</Typography>;
 const BusinessAccountText = <Typography variant='h3'>Business Account</Typography>;
@@ -44,15 +46,17 @@ function LoginComponent() {
 	);
 	let loginButton = (
 		<div>
-			<Button
-				onClick={() => {
-					// AddNewUserLinksService(linkNameValue, linkURLValue, linkImageValue, userObject);
-					// setUserSubmittingNewLink(false);
-					// setRenderUserLinksUserInput(false);
-				}}
-				variant='outlined'>
-				{loginButtonText}
-			</Button>
+			<Link to='/ServiceProviderPrivatePage'>
+				<Button
+					onClick={() => {
+						// AddNewUserLinksService(linkNameValue, linkURLValue, linkImageValue, userObject);
+						// setUserSubmittingNewLink(false);
+						// setRenderUserLinksUserInput(false);
+					}}
+					variant='outlined'>
+					{loginButtonText}
+				</Button>
+			</Link>
 		</div>
 	);
 	let registerButton = (
@@ -96,38 +100,6 @@ function LoginComponent() {
 				</Container>
 			</div>
 		</div>
-		// <div>
-		// 	{/* <Grid container>
-		// 		<Grid item>
-		// 			<CalendarViewDayIcon />
-		// 		</Grid>
-		// 		<Grid item>{smartBookingText}</Grid>
-		// 	</Grid> */}
-		// 	<Container>
-		// 		<Row className='align-items-center'>
-		// 			<Col className='text-center' xs={12} md={{ span: 7 }} lg={{ span: 4 }}>
-		// 				<div>{BusinessAccountText}</div>
-		// 				<div>{LoginText}</div>
-
-		// 				{emailText}
-		// 				<br />
-		// 				{userNameTextField}
-		// 				<br />
-		// 				{passwordText}
-		// 				<br />
-		// 				{passwordTextField}
-
-		// 				{loginButton}
-		// 				{registerButton}
-		// 			</Col>
-		// 			<Col className='text-center' xs={12} md={{ span: 7 }} lg={{ span: 6 }}>
-		// 				<img src={loginpageiconv1} width='50vh' height='50vh' />
-		// 			</Col>
-		// 		</Row>
-		// 	</Container>
-
-		// 	<div></div>
-		// </div>
 	);
 }
 

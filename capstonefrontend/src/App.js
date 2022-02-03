@@ -11,6 +11,7 @@ import { SmartBookingToolbarComponent } from './Components/SmartBookingToolbarCo
 import { LoginPage } from './Pages/LoginPage.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
 import { HomePage } from './Pages/HomePage.js';
+import { ServiceProviderPrivatePage } from './Pages/ServiceProviderPrivatePage.js';
 import { AddServicesPage } from './Pages/AddServicesPage.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
@@ -31,6 +32,10 @@ function App() {
 				{/* <LoginComponent /> */}
 				<BrowserRouter>
 					<Routes>
+						<Route
+							path='/ServiceProviderPrivatePage'
+							element={<ServiceProviderPrivatePage />}
+						/>
 						<Route path='/home' element={<HomePage />} />
 						<Route path='/main' element={<MainComponent />} />
 						<Route path='/Login' element={<LoginPage />} />
