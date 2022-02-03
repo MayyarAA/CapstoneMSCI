@@ -7,6 +7,7 @@ import 'firebase/auth';
 import 'firebase/analytics';
 import 'firebase/firestore';
 import { MainComponent } from './Components/MainComponent.js';
+import { LoginPage } from './Pages/LoginPage.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
 import { HomePage } from './Pages/HomePage.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -23,8 +24,9 @@ function App() {
 		<MainContextProvider>
 			<BrowserRouter>
 				<Routes>
-					<Route path='/homepage' element={<HomePage />} />
+					<Route path='/home' element={<HomePage />} />
 					<Route path='/main' element={<MainComponent />} />
+					<Route path='/Login' element={<LoginPage />} />
 				</Routes>
 			</BrowserRouter>
 			<div className='App'></div>
