@@ -4,6 +4,7 @@ import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import { Grid, Box, TextField, Button, Typography } from '@mui/material/';
 import loginpageiconv1 from '../images/loginpageiconv1.png';
 import { Container, Row, Col } from 'react-bootstrap';
+import '../App.css';
 const smartBookingText = <Typography variant='h6'>SmartBooking</Typography>;
 const BusinessAccountText = <Typography variant='h3'>Business Account</Typography>;
 const LoginText = <Typography variant='h4'>Login to your account</Typography>;
@@ -62,49 +63,71 @@ function LoginComponent() {
 		</div>
 	);
 	return (
-		<div>
-			<Grid container>
-				<Grid item>
-					<CalendarViewDayIcon />
-				</Grid>
-				<Grid item>{smartBookingText}</Grid>
-			</Grid>
-			<Container>
-				<Row>
-					<Col className='text-center' xs={12} md={{ span: 7 }} lg={{ span: 6 }}>
-						<Box>
+		<div className='section'>
+			<div className='section-content'>
+				<Container>
+					<Row className='align-items-center'>
+						<Col
+							xs={{ span: 12, order: 2 }}
+							md={{ span: 6, order: 1 }}
+							lg={{ span: 8, order: 1 }}>
 							<div>{BusinessAccountText}</div>
 							<div>{LoginText}</div>
-						</Box>
-						<Grid contianer direction='row' justifyContent='center' alignItems='center'>
-							<Grid item>{emailText}</Grid>
-							<br />
-							<Grid item>{userNameTextField}</Grid>
-							<br />
-							<Grid item>{passwordText}</Grid>
-							<br />
-							<Grid item>{passwordTextField}</Grid>
-						</Grid>
 
-						<Grid
-							container
-							// direction='column'
-							alignItems='center'
-							justify='center'
-							style={{ minHeight: '100vh' }}
-							spacing={2}>
-							<Grid item>{loginButton}</Grid>
-							<Grid item>{registerButton}</Grid>
-						</Grid>
-					</Col>
-					<Col className='text-center' xs={12} md={{ span: 7 }} lg={{ span: 6 }}>
-						<img src={loginpageiconv1} />
-					</Col>
-				</Row>
-			</Container>
+							{emailText}
+							<br />
+							{userNameTextField}
+							<br />
+							{passwordText}
+							<br />
+							{passwordTextField}
 
-			<div></div>
+							{loginButton}
+							{registerButton}
+						</Col>
+						<Col
+							className='text-center'
+							xs={{ span: 12, order: 1 }}
+							md={{ span: 6, order: 2 }}
+							lg={{ span: 3, order: 1 }}>
+							<img src={loginpageiconv1} height='200px' />
+						</Col>
+					</Row>
+				</Container>
+			</div>
 		</div>
+		// <div>
+		// 	{/* <Grid container>
+		// 		<Grid item>
+		// 			<CalendarViewDayIcon />
+		// 		</Grid>
+		// 		<Grid item>{smartBookingText}</Grid>
+		// 	</Grid> */}
+		// 	<Container>
+		// 		<Row className='align-items-center'>
+		// 			<Col className='text-center' xs={12} md={{ span: 7 }} lg={{ span: 4 }}>
+		// 				<div>{BusinessAccountText}</div>
+		// 				<div>{LoginText}</div>
+
+		// 				{emailText}
+		// 				<br />
+		// 				{userNameTextField}
+		// 				<br />
+		// 				{passwordText}
+		// 				<br />
+		// 				{passwordTextField}
+
+		// 				{loginButton}
+		// 				{registerButton}
+		// 			</Col>
+		// 			<Col className='text-center' xs={12} md={{ span: 7 }} lg={{ span: 6 }}>
+		// 				<img src={loginpageiconv1} width='50vh' height='50vh' />
+		// 			</Col>
+		// 		</Row>
+		// 	</Container>
+
+		// 	<div></div>
+		// </div>
 	);
 }
 

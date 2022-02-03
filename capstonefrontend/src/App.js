@@ -7,6 +7,7 @@ import 'firebase/auth';
 import 'firebase/analytics';
 import 'firebase/firestore';
 import { MainComponent } from './Components/MainComponent.js';
+import { LoginComponent } from './Components/LoginComponent.js';
 import { LoginPage } from './Pages/LoginPage.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
 import { HomePage } from './Pages/HomePage.js';
@@ -21,7 +22,10 @@ function App() {
 	}
 	login();
 	return (
+		// <div>
+		// </div>
 		<MainContextProvider>
+			{/* <LoginComponent /> */}
 			<BrowserRouter>
 				<Routes>
 					<Route path='/home' element={<HomePage />} />
@@ -29,7 +33,9 @@ function App() {
 					<Route path='/Login' element={<LoginPage />} />
 				</Routes>
 			</BrowserRouter>
-			<div className='App'></div>
+			<div className='App'>
+				<LoginComponent />
+			</div>
 		</MainContextProvider>
 	);
 }
