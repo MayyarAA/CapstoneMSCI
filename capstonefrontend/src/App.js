@@ -17,7 +17,7 @@ import { AddServicesPage } from './Pages/ServiceProviderPages/AddServicesPage.js
 import { SearchPage } from './Pages/SearchPages/SearchPage.js';
 import { LoginPageUser } from './Pages/LoginPages/LoginPageUser.js';
 import { CreateAppointmentPage } from './Pages/AppointmentPages/CreateAppointmentPage.js';
-
+// import { FooterComponent } from './Components/FooterComponent.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
 	if (!firebase.apps.length) {
@@ -54,6 +54,7 @@ function App() {
 						<Route path='/createappointment' element={<CreateAppointmentPage />} />
 					</Routes>
 				</BrowserRouter>
+				{/* <FooterComponent /> */}
 			</MainContextProvider>
 		</div>
 	);
