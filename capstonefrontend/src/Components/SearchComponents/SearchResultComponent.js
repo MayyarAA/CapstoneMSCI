@@ -19,6 +19,15 @@ import {
 import { makeStyles } from '@mui/styles';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import goldenstyle from '../../images/goldenstyle.jpeg';
+import prettylittlething from '../../images/prettylittlething.png';
+import colourexperts from '../../images/colourexperts.png';
+import chateauGC from '../../images/chateauGC.png';
+import onestudio from '../../images/onestudio.png';
+import educo from '../../images/educo.png';
+import dsquare from '../../images/dsquare.webp';
+import evolve from '../../images/evolve.png';
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		maxWidth: 500,
@@ -48,16 +57,70 @@ function SearchResultComponent() {
 	const navigate = useNavigate();
 	let result = <Row>barber1</Row>;
 	let listOfShops = [];
-	for (let i = 0; i < 4; i++) {
-		listOfShops.push(
-			new ShopObject(
-				`barber ${i}`,
-				'modern gender netueral barber',
-				'long descr',
-				'../../images/calendariconv1.png'
-			)
-		);
-	}
+	listOfShops.push(
+		new ShopObject(
+			'golden style',
+			'modern gender netueral style shop',
+			'long dscr',
+			goldenstyle
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'chateau GC ',
+			'Upscale service, taking care of everything',
+			'long dscr',
+			chateauGC
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'prettylittlethings shop',
+			'beautify shop dedicated to making you look pretty',
+			'long dscr',
+			prettylittlething
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'colourexperts',
+			'Professional colouring shop, for all hair types',
+			'long dscr',
+			colourexperts
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'studion one',
+			'experience complete, undivided attention from our skilled professionals',
+			'long dscr',
+			onestudio
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'educo',
+			'Our hairstylists at educo are professionally committed to connecting with their clients',
+			'long dscr',
+			educo
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'dsquare',
+			'evolving Midtown and hosts some of the best stylist talent in the city',
+			'long dscr',
+			dsquare
+		)
+	);
+	listOfShops.push(
+		new ShopObject(
+			'evolve',
+			'We believe that a visit to the salon should be relaxing yet luxurious',
+			'long dscr',
+			evolve
+		)
+	);
 
 	let directToShopPage = (shopName) => {
 		navigate('/ServiceProviderallservices');
@@ -65,7 +128,7 @@ function SearchResultComponent() {
 	if (true) {
 		result = (
 			<Container>
-				<List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+				<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
 					{listOfShops.map((shopResult) => {
 						const labelId = `checkbox-list-secondary-label-${shopResult.shopName}`;
 						return (

@@ -1,8 +1,11 @@
 import { ServiceProviderListServicesComponent } from '../../Components/ServiceProviderComponents/ServiceProviderListServicesComponent.js';
+import { ServiceProviderServicesListComponent } from '../../Components/ServiceProviderComponents/ServiceProviderServicesListComponent.js';
+
 function ServiceProviderServicesPage() {
 	return (
 		<div>
-			<ServiceProviderListServicesComponent />
+			{/* <ServiceProviderListServicesComponent /> */}
+			<ServiceProviderServicesListComponent />
 		</div>
 	);
 }

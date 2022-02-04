@@ -16,25 +16,33 @@ import {
 	Avatar,
 } from '@mui/material/';
 import { Container, Row, Col } from 'react-bootstrap';
-import haircut from '../../images/haircut.png';
-import nailcolour from '../../images/nailcolour.png';
-import beardicon from '../../images/beardicon.png';
-import eyebrowicon from '../../images/eyebrowicon.png';
+// import haircut from '../../images/haircut.png';
+import haircut from '../../images/haircut2.jpeg';
+// import nailcolour from '../../images/nailcolour.png';
+import nailcolour from '../../images/nailcolour2.jpeg';
+// import beardicon from '../../images/beardicon.png';
+import facial from '../../images/facial.jpeg';
+// import eyebrowicon from '../../images/eyebrowicon.png';
+import eyebrowicon from '../../images/eyebrowicon2.jpeg';
 import React, { useContext, useEffect, useState } from 'react';
 let ServiceNameFcn = (serviceName) => {
-	return <Typography variant='h5'>{serviceName}</Typography>;
+	return (
+		<Typography font='Arial' variant='h5'>
+			{serviceName}
+		</Typography>
+	);
 };
 let minPriceFcn = (minPriceVal) => {
 	return <Typography variant='h5'>{`$ ${minPriceVal}`}</Typography>;
 };
 let maxPriceFcn = (maxPriceVal) => {
-	return <Typography variant='h5'>{`$ ${maxPriceVal}`}</Typography>;
+	return <Typography font='Arial' variant='h5'>{`$ ${maxPriceVal}`}</Typography>;
 };
 let serviceTimeFcn = (serviceTimeVal) => {
-	return <Typography variant='h5'>{`${serviceTimeVal} min`}</Typography>;
+	return <Typography font='Arial' variant='h5'>{`${serviceTimeVal} min`}</Typography>;
 };
 let serviceImage = (serviceImageVal) => {
-	return <img height='45px' src={serviceImageVal} />;
+	return <img height='75px' src={serviceImageVal} />;
 };
 let serviceComponent = (serviceName, minPrice, maxPrice, serviceTime, serviceImageVal) => {
 	return (
@@ -136,7 +144,8 @@ function ServiceProviderListServicesComponent() {
 				{serviceComponent('eyebrow', '10', '40', '25', eyebrowicon)}
 				{serviceComponent('nail art', '29', '60', '20', nailcolour)}
 				{serviceComponent('haircut', '30', '42', '60', haircut)}
-				{serviceComponent('beard styling', '15', '25', '20', beardicon)}
+				{/* {serviceComponent('beard styling', '15', '25', '20', beardicon)} */}
+				{serviceComponent('facial care', '100', '155', '45', facial)}
 			</Container>
 		</div>
 	);

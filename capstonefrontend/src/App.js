@@ -16,6 +16,7 @@ import { ServiceProviderPrivatePage } from './Pages/ServiceProviderPages/Service
 import { AddServicesPage } from './Pages/ServiceProviderPages/AddServicesPage.js';
 import { SearchPage } from './Pages/SearchPages/SearchPage.js';
 import { LoginPageUser } from './Pages/LoginPages/LoginPageUser.js';
+import { CreateAppointmentPage } from './Pages/AppointmentPages/CreateAppointmentPage.js';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
@@ -50,6 +51,7 @@ function App() {
 						<Route path='/Login' element={<LoginPage />} />
 						<Route path='/LoginUser' element={<LoginPageUser />} />
 						<Route path='/AddServices' element={<AddServicesPage />} />
+						<Route path='/createappointment' element={<CreateAppointmentPage />} />
 					</Routes>
 				</BrowserRouter>
 			</MainContextProvider>
