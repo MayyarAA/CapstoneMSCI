@@ -5,14 +5,30 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
-import Button from '@mui/material/Button';
+import { Button, Typography } from '@mui/material/';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import searchbackimage from '../../images/searchbackimage.png';
 // import { Container, Row, Col } from 'react-bootstrap';
 import { Box, Grid, Paper } from '@mui/material/';
+const findAllButtonText = <Typography variant='h5'>Find All</Typography>;
+const myDivStyle = {
+	flex: 1000,
+	width: 1000,
+};
+// const findAllButton = (fcn) => {
+// 	return (
+
+// 	);
+// };
+const searchHomePageBackImageComponent = (
+	<div style={myDivStyle}>
+		<img height='350 vh' src={searchbackimage} />
+	</div>
+);
 function SearchHomeComponent() {
+	const navigate = useNavigate();
 	return (
 		<div>
 			<Container>
@@ -33,6 +49,22 @@ function SearchHomeComponent() {
 						{searchHomePageBackImageComponent}
 					</Col>
 				</Row>
+				<Row>
+					<Col
+						xs={{ span: 12, order: 2 }}
+						md={{ span: 6, order: 1 }}
+						lg={{ span: 8, order: 1 }}>
+						<div style={myDivStyle}>
+							<Button
+								onClick={() => {
+									navigate('/searchresults');
+								}}
+								variant='outlined'>
+								{findAllButtonText}
+							</Button>
+						</div>
+					</Col>
+				</Row>
 			</Container>
 
 			{/* <Grid container justify='center'>
@@ -46,15 +78,6 @@ function SearchHomeComponent() {
 		</div>
 	);
 }
-const myDivStyle = {
-	flex: 1000,
-	width: 1000,
-};
-const searchHomePageBackImageComponent = (
-	<div style={myDivStyle}>
-		<img height='350 vh' src={searchbackimage} />
-	</div>
-);
 
 export { SearchHomeComponent };
 
