@@ -26,7 +26,7 @@ function App() {
 		// </div>
 		<div className='App'>
 			<MainContextProvider>
-				{/* <LoginComponent /> */}
+				<LoginComponent /> 
 				<BrowserRouter>
 					<Routes>
 						<Route path='/home' element={<HomePage />} />

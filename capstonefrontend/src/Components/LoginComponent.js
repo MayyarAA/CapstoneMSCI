@@ -63,7 +63,18 @@ function LoginComponent() {
 		</div>
 	);
 	return (
-		<div className='section'>
+		<Container>
+  <Row>
+    <Col>1 of 2</Col>
+    <Col>2 of 2</Col>
+  </Row>
+  <Row>
+    <Col>1 of 3</Col>
+    <Col>2 of 3</Col>
+    <Col>3 of 3</Col>
+  </Row>
+</Container>
+		/*<div className='section'>
 			<div className='section-content'>
 				<Container>
 					<Row className='align-items-center'>
@@ -95,7 +106,8 @@ function LoginComponent() {
 					</Row>
 				</Container>
 			</div>
-		</div>
+			
+		</div>*/
 		// <div>
 		// 	{/* <Grid container>
 		// 		<Grid item>
