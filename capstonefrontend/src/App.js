@@ -15,6 +15,7 @@ import { ServiceProviderServicesPage } from './Pages/ServiceProviderPages/Servic
 import { ServiceProviderPrivatePage } from './Pages/ServiceProviderPages/ServiceProviderPrivatePage.js';
 import { AddServicesPage } from './Pages/ServiceProviderPages/AddServicesPage.js';
 import { SearchPage } from './Pages/SearchPages/SearchPage.js';
+import { SearchPageResults } from './Pages/SearchPages/SearchPageResults.js';
 import { LoginPageUser } from './Pages/LoginPages/LoginPageUser.js';
 import { CreateAppointmentPage } from './Pages/AppointmentPages/CreateAppointmentPage.js';
 import { FooterComponent } from './Components/FooterComponent.js';
@@ -38,6 +39,7 @@ function App() {
 				<BrowserRouter>
 					<Routes>
 						<Route path='/Search' element={<SearchPage />} />
+						<Route path='/searchresults' element={<SearchPageResults />} />
 						<Route
 							path='/ServiceProviderPrivatePage'
 							element={<ServiceProviderPrivatePage />}

@@ -91,7 +91,7 @@ function SearchResultComponent() {
 	);
 	listOfShops.push(
 		new ShopObject(
-			'studion one',
+			'studio one',
 			'experience complete, undivided attention from our skilled professionals',
 			'long dscr',
 			onestudio
