@@ -83,12 +83,12 @@ function ServiceProviderServicesListComponent() {
 										/>
 										{/* <ListItemText secondary={serviceResult.servicePrice}></ListItemText> */}
 
-										{/* <ListItemButton
+										<ListItemButton
 											onClick={() => {
 												directToShopPage(serviceResult.serviceName);
 											}}>
 											Book now
-										</ListItemButton> */}
+										</ListItemButton>
 									</ListItemButton>
 								</ListItem>
 							</div>

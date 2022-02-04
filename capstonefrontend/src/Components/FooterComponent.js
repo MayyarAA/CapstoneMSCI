@@ -1,60 +1,144 @@
-// import React from 'react';
-// import { Box, Container, Row, Column, FooterLink, Heading } from './FooterStyles.js';
+import {
+	Toolbar,
+	AppBar,
+	Button,
+	Typography,
+	Tabs,
+	Grid,
+	FormHelperText,
+	IconButton,
+	Box,
+} from '@mui/material/';
+import { SmartBookingToolbarComponent } from './SmartBookingToolbarComponent.js';
+import { Container, Row, Col } from 'react-bootstrap';
+import { makeStyles } from '@mui/styles';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import FacebookIcon from '@mui/icons-material/Facebook';
+const useStyles = makeStyles((theme) => ({
+	root: {
+		flexGrow: 1,
+	},
 
-// const FooterComponent = () => {
-// 	return (
-// 		<Box>
-// 			<h1 style={{ color: 'green', textAlign: 'center', marginTop: '-50px' }}>
-// 				GeeksforGeeks: A Computer Science Portal for Geeks
-// 			</h1>
-// 			<Container>
-// 				<Row>
-// 					<Column>
-// 						<Heading>About Us</Heading>
-// 						<FooterLink href='#'>Aim</FooterLink>
-// 						<FooterLink href='#'>Vision</FooterLink>
-// 						<FooterLink href='#'>Testimonials</FooterLink>
-// 					</Column>
-// 					<Column>
-// 						<Heading>Services</Heading>
-// 						<FooterLink href='#'>Writing</FooterLink>
-// 						<FooterLink href='#'>Internships</FooterLink>
-// 						<FooterLink href='#'>Coding</FooterLink>
-// 						<FooterLink href='#'>Teaching</FooterLink>
-// 					</Column>
-// 					<Column>
-// 						<Heading>Contact Us</Heading>
-// 						<FooterLink href='#'>Uttar Pradesh</FooterLink>
-// 						<FooterLink href='#'>Ahemdabad</FooterLink>
-// 						<FooterLink href='#'>Indore</FooterLink>
-// 						<FooterLink href='#'>Mumbai</FooterLink>
-// 					</Column>
-// 					<Column>
-// 						<Heading>Social Media</Heading>
-// 						<FooterLink href='#'>
-// 							<i className='fab fa-facebook-f'>
-// 								<span style={{ marginLeft: '10px' }}>Facebook</span>
-// 							</i>
-// 						</FooterLink>
-// 						<FooterLink href='#'>
-// 							<i className='fab fa-instagram'>
-// 								<span style={{ marginLeft: '10px' }}>Instagram</span>
-// 							</i>
-// 						</FooterLink>
-// 						<FooterLink href='#'>
-// 							<i className='fab fa-twitter'>
-// 								<span style={{ marginLeft: '10px' }}>Twitter</span>
-// 							</i>
-// 						</FooterLink>
-// 						<FooterLink href='#'>
-// 							<i className='fab fa-youtube'>
-// 								<span style={{ marginLeft: '10px' }}>Youtube</span>
-// 							</i>
-// 						</FooterLink>
-// 					</Column>
-// 				</Row>
-// 			</Container>
-// 		</Box>
-// 	);
-// };
-// export { FooterComponent };
+	title: {
+		flexGrow: 1,
+	},
+	items: {
+		fontSize: 40,
+	},
+	Appbartheme: { background: '#ffcccb' },
+}));
+function FooterComponent() {
+	const classes = useStyles();
+	const toolBar = (
+		<div>
+			{/* <div className={classes.root}> */}
+			<AppBar
+				className={classes.Appbartheme}
+				// position='static'
+
+				style={{ top: 'auto', bottom: 0 }}>
+				<Toolbar>
+					<Grid container>
+						<Grid item>
+							<SmartBookingToolbarComponent />
+						</Grid>
+						{/* <Grid item>Name</Grid> */}
+					</Grid>
+					<Grid container>
+						<Grid item>{/* <InstagramIcon /> */}</Grid>
+						<Grid item>{/* <PinterestIcon /> */}</Grid>
+					</Grid>
+					<Grid container>
+						<Grid item>{/* <InstagramIcon /> */}</Grid>
+						<Grid item>{/* <PinterestIcon /> */}</Grid>
+					</Grid>
+					<Grid container>
+						<Grid item>{/* <InstagramIcon /> */}</Grid>
+						<Grid item>{/* <PinterestIcon /> */}</Grid>
+					</Grid>
+					<Grid container>
+						<Grid item>{/* <InstagramIcon /> */}</Grid>
+						<Grid item>{/* <PinterestIcon /> */}</Grid>
+					</Grid>
+					<Grid container>
+						<Grid item>{/* <InstagramIcon /> */}</Grid>
+						<Grid item>{/* <PinterestIcon /> */}</Grid>
+					</Grid>
+					<Grid container>
+						<Grid item>
+							<InstagramIcon />
+						</Grid>
+						<Grid item>
+							<PinterestIcon />
+						</Grid>
+						<Grid item>
+							<FacebookIcon />
+						</Grid>
+					</Grid>
+				</Toolbar>
+			</AppBar>
+			{/* </div> */}
+		</div>
+	);
+	// <Container fluid>
+	// 	<Row>
+	// 		{/* <Col>Contact Us</Col> */}
+	// 		<Col>
+	// 			<div>
+	// 				<InstagramIcon />
+	// 			</div>
+	// 		</Col>
+	// 		<Col>
+	// 			<div>
+	// 				<PinterestIcon />
+	// 			</div>
+	// 		</Col>
+	// 		<Col>
+	// 			<div>
+	// 				<FacebookIcon />
+	// 			</div>
+	// 		</Col>
+	// 	</Row>
+	// </Container>
+
+	// return <NavBar />;
+	return toolBar;
+}
+
+const toolBar2 = (
+	<div>
+		{/* <div className={classes.root}> */}
+		<Container fluid>
+			<Grid container>
+				<Grid item>
+					<SmartBookingToolbarComponent />
+				</Grid>
+				{/* <Grid item>Name</Grid> */}
+			</Grid>
+			<Container fluid>
+				<Row>
+					{/* <Col>Contact Us</Col> */}
+					<Col>
+						<div>
+							<InstagramIcon />
+						</div>
+					</Col>
+					<Col>
+						<div>
+							<PinterestIcon />
+						</div>
+					</Col>
+					<Col>
+						<div>
+							<FacebookIcon />
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		</Container>
+		{/* </div> */}
+	</div>
+);
+
+export { FooterComponent };
