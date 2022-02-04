@@ -8,13 +8,15 @@ import 'firebase/analytics';
 import 'firebase/firestore';
 import { MainComponent } from './Components/MainComponent.js';
 import { SmartBookingToolbarComponent } from './Components/SmartBookingToolbarComponent.js';
-import { LoginPage } from './Pages/LoginPage.js';
+import { LoginPage } from './Pages/LoginPages/LoginPage.js';
 import { MainContextProvider } from './ContextConfig/MainContext.js';
 import { HomePage } from './Pages/HomePage.js';
 import { ServiceProviderServicesPage } from './Pages/ServiceProviderPages/ServiceProviderServicesPage.js';
 import { ServiceProviderPrivatePage } from './Pages/ServiceProviderPages/ServiceProviderPrivatePage.js';
-import { AddServicesPage } from './Pages/AddServicesPage.js';
+import { AddServicesPage } from './Pages/ServiceProviderPages/AddServicesPage.js';
 import { SearchPage } from './Pages/SearchPages/SearchPage.js';
+import { LoginPageUser } from './Pages/LoginPages/LoginPageUser.js';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
 	if (!firebase.apps.length) {
@@ -46,6 +48,7 @@ function App() {
 						<Route path='/home' element={<HomePage />} />
 						<Route path='/main' element={<MainComponent />} />
 						<Route path='/Login' element={<LoginPage />} />
+						<Route path='/LoginUser' element={<LoginPageUser />} />
 						<Route path='/AddServices' element={<AddServicesPage />} />
 					</Routes>
 				</BrowserRouter>

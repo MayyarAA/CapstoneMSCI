@@ -1,4 +1,4 @@
-import { AddServicesComponent } from '../Components/AddServicesComponent.js';
+import { AddServicesComponent } from '../../Components/ServiceProviderComponents/AddServicesComponent.js';
 function AddServicesPage() {
 	return (
 		<div>

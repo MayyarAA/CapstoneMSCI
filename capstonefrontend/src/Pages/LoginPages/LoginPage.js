@@ -1,5 +1,4 @@
-import { LoginComponent } from '../Components/LoginComponent.js';
-import { Grid, Box } from '@mui/material/';
+import { LoginComponent } from '../../Components/LoginComponents/LoginComponent.js';
 function LoginPage() {
 	return (
 		<div>

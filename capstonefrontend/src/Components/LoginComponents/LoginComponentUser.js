@@ -2,20 +2,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import { Grid, Box, TextField, Button, Typography } from '@mui/material/';
-import loginpageiconv1 from '../images/loginpageiconv1.png';
+import loginpageiconv1 from '../../images/loginpageiconv1.png';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
-import { ServiceProviderPrivatePage } from '../Pages/ServiceProviderPages/ServiceProviderPrivatePage.js';
-import '../App.css';
+import { ServiceProviderPrivatePage } from '../../Pages/ServiceProviderPages/ServiceProviderPrivatePage.js';
+import '../../App.css';
 const smartBookingText = <Typography variant='h6'>SmartBooking</Typography>;
-const BusinessAccountText = <Typography variant='h3'>Business Account</Typography>;
+const BusinessAccountText = <Typography variant='h3'>User Account</Typography>;
 const LoginText = <Typography variant='h4'>Login to your account</Typography>;
 const emailText = <Typography variant='h7'>email</Typography>;
 const passwordText = <Typography variant='h7'>password</Typography>;
 const loginButtonText = <Typography variant='h7'>Login</Typography>;
 const registerButtonText = <Typography variant='h7'>Register</Typography>;
 
-function LoginComponent() {
+function LoginComponentUser() {
 	const [userName, setUserName] = useState(' ');
 	const [password, setPassword] = useState(' ');
 	let userNameTextField = (
@@ -46,7 +46,7 @@ function LoginComponent() {
 	);
 	let loginButton = (
 		<div>
-			<Link to='/ServiceProviderPrivatePage'>
+			<Link to='/Search'>
 				<Button
 					onClick={() => {
 						// AddNewUserLinksService(linkNameValue, linkURLValue, linkImageValue, userObject);
@@ -103,4 +103,4 @@ function LoginComponent() {
 	);
 }
 
-export { LoginComponent };
+export { LoginComponentUser };
