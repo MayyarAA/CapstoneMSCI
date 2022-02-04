@@ -7,28 +7,52 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import searchbackimage from '../../images/searchbackimage.png';
 // import { Container, Row, Col } from 'react-bootstrap';
-import { Box, Container, Paper } from '@mui/material/';
+import { Box, Grid, Paper } from '@mui/material/';
 function SearchHomeComponent() {
 	return (
 		<div>
-			<Container maxWidth='sm'>
-				<Box>
-					<FreeSoloCreateOptionDialog />
-				</Box>
-				<Box>{searchHomePageBackImageComponent}</Box>
+			<Container>
+				<Row className='align-items-center'>
+					<Col
+						xs={{ span: 12, order: 2 }}
+						md={{ span: 6, order: 1 }}
+						lg={{ span: 8, order: 1 }}>
+						<FreeSoloCreateOptionDialog />
+					</Col>
+				</Row>
+				<Row className='align-items-center'>
+					<Col
+						className='text-center'
+						xs={{ span: 12, order: 1 }}
+						md={{ span: 6, order: 2 }}
+						lg={{ span: 3, order: 1 }}>
+						{searchHomePageBackImageComponent}
+					</Col>
+				</Row>
 			</Container>
+
+			{/* <Grid container justify='center'>
+				<Grid item>
+					<FreeSoloCreateOptionDialog />
+				</Grid>
+				<Grid item>{searchHomePageBackImageComponent}</Grid>
+			</Grid>  */}
 
 			<br />
 		</div>
 	);
 }
-
+const myDivStyle = {
+	flex: 1000,
+	width: 1000,
+};
 const searchHomePageBackImageComponent = (
-	<div>
-		<img height='150 vh' src={searchbackimage} />
+	<div style={myDivStyle}>
+		<img height='350 vh' src={searchbackimage} />
 	</div>
 );
 
@@ -118,7 +142,7 @@ function FreeSoloCreateOptionDialog() {
 				clearOnBlur
 				handleHomeEndKeys
 				renderOption={(props, option) => <li {...props}>{option.title}</li>}
-				sx={{ width: 300 }}
+				sx={{ width: 1000 }}
 				freeSolo
 				renderInput={(params) => <TextField {...params} label='Free solo dialog' />}
 			/>

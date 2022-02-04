@@ -55,3 +55,10 @@ div.text-center.col-md-6.col-12.order-md-2.order-1 {
 		padding-left: 250px;
 	}
 }
+
+@media (min-width: 992px) {
+	col-lg-3 {
+		flex: 0 0 auto;
+		width: 0%;
+	}
+}
