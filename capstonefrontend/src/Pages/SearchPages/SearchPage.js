@@ -1,7 +1,8 @@
 import { SearchResultComponent } from '../../Components/SearchComponents/SearchResultComponent.js';
+import '../../App.css';
 function SearchPage() {
 	return (
-		<div>
+		<div className='App'>
 			<SearchResultComponent />
 		</div>
 	);
