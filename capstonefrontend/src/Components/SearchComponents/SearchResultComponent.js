@@ -18,6 +18,7 @@ import {
 } from '@mui/material/';
 import { makeStyles } from '@mui/styles';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		maxWidth: 500,
@@ -44,6 +45,7 @@ function ShopObject(shopName, shopShortDescr, shopeLongDescr, shopImage) {
 	this.shopImage = shopImage;
 }
 function SearchResultComponent() {
+	const navigate = useNavigate();
 	let result = <Row>barber1</Row>;
 	let listOfShops = [];
 	for (let i = 0; i < 4; i++) {
@@ -56,6 +58,10 @@ function SearchResultComponent() {
 			)
 		);
 	}
+
+	let directToShopPage = (shopName) => {
+		navigate('/ServiceProviderallservices');
+	};
 	if (true) {
 		result = (
 			<Container>
@@ -72,15 +78,16 @@ function SearchResultComponent() {
 										<ListItemText
 											id={labelId}
 											primary={` ${shopResult.shopName}`}
+											secondary={shopResult.shopShortDescr}
 											onClick={() => {
-												// openNewTap(linkObj.link);
+												directToShopPage(shopResult.shopName);
 											}}
 										/>
-										<ListItemText
+										{/* <ListItemText
 											id={labelId}
 											primary={` ${shopResult.shopShortDescr}`}
 											onClick={() => {}}
-										/>
+										/> */}
 									</ListItemButton>
 								</ListItem>
 							</div>
