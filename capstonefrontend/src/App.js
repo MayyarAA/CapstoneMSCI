@@ -20,6 +20,7 @@ import { LoginPageUser } from './Pages/LoginPages/LoginPageUser.js';
 import { CreateAppointmentPage } from './Pages/AppointmentPages/CreateAppointmentPage.js';
 import { FooterComponent } from './Components/FooterComponent.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'react-calendar/dist/Calendar.css';
 function App() {
 	if (!firebase.apps.length) {
 		console.log('in firebase.apps.length');
