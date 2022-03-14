@@ -4,6 +4,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function CreateAppointmentV1Component() {
   const [value, onChange] = useState(new Date());
+  
+
+ 
 
   return (
   
@@ -17,7 +20,9 @@ function CreateAppointmentV1Component() {
             xs={{ span: 12, order: 2 }}
             md={{ span: 6, order: 1 }}
             lg={{ span: 8, order: 1 }}>
-            <Calendar onChange={onChange} value={value} />
+            
+            <Calendar onChange={onChange} value={value}/>
+          
           </Col>
           <Col
             className='text-center'
@@ -26,6 +31,7 @@ function CreateAppointmentV1Component() {
             lg={{ span: 3, order: 1 }}>
             <div style={{ maxWidth: 250 }}>
             <ul class="list-group">
+            {(value.toDateString())}
             <li class="list-group-item">8AM - 9PM Price: $34</li>
             <li class="list-group-item">11AM - 12PM  Price: $24</li>
             <li class="list-group-item">1PM - 2PM  Price: $44 </li>
