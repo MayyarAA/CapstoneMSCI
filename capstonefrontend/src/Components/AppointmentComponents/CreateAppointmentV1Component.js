@@ -6,7 +6,7 @@ import { Modal, Button, ListGroup } from "react-bootstrap";
 function CreateAppointmentV1Component() {
   const [value, onChange] = useState(new Date());
   const [showModal, setShow] = useState(false);
-
+  const [time, setTime] = useState(" ");
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
 
@@ -36,16 +36,20 @@ const handleShow = () => setShow(true);
             <div style={{ maxWidth: 250 }}>
             <ListGroup class="list-group">
             <h4>{(value.toDateString())}</h4>
-            <ListGroup.Item action variant="primary" onClick={handleShow} class="list-group-item">8AM - 9AM Price: $34</ListGroup.Item>
-            <ListGroup.Item action variant="primary" class="list-group-item">11AM - 12PM  Price: $24</ListGroup.Item>
-            <ListGroup.Item action variant="primary" class="list-group-item">1PM - 2PM  Price: $44 </ListGroup.Item>
-            <ListGroup.Item action variant="primary" class="list-group-item">3PM - 5PM Price: $31 </ListGroup.Item>
-            <ListGroup.Item action variant="primary" class="list-group-item">6PM - 7PM Price: $25 </ListGroup.Item>
+            <ListGroup.Item action variant="primary" onClick={() => {handleShow(); setTime("8AM - 9AM")}} class="list-group-item">8AM - 9AM Price: ${Math.floor(Math.random() * (40 - 30 + 1)) + 30}</ListGroup.Item>
+            <ListGroup.Item action variant="primary" onClick={() => {handleShow(); setTime("11AM - 12PM")}} class="list-group-item">11AM - 12PM  Price: ${Math.floor(Math.random() * (40 - 30 + 1)) + 30}</ListGroup.Item>
+            <ListGroup.Item action variant="primary" onClick={() => {handleShow(); setTime("1PM - 2PM")}} class="list-group-item">1PM - 2PM  Price: ${Math.floor(Math.random() * (40 - 30 + 1)) + 30} </ListGroup.Item>
+            <ListGroup.Item action variant="primary" onClick={() => {handleShow(); setTime("3PM - 5PM ")}} class="list-group-item">3PM - 5PM Price: ${Math.floor(Math.random() * (40 - 30 + 1)) + 30} </ListGroup.Item>
+            <ListGroup.Item action variant="primary" onClick={() => {handleShow(); setTime("6PM - 7PM")}} class="list-group-item">6PM - 7PM Price: ${Math.floor(Math.random() * (40 - 30 + 1)) + 30} </ListGroup.Item>
 
 
             
         </ListGroup>
+        <div style={{opacity: '0.5'}}>
+        <p> please note: prices are determined dynamically based on demand</p>
 
+        </div>
+       
        
         </div>
           </Col>
@@ -57,8 +61,8 @@ const handleShow = () => setShow(true);
         <Modal.Header closeButton>
           <Modal.Title>Booking</Modal.Title>
         </Modal.Header>
-        <Modal.Body> Would you like to book: {(value.toDateString())} 8AM - 9PM </Modal.Body>
-        <Modal.Body>  Price: $34</Modal.Body>
+        <Modal.Body> Would you like to book: {(value.toDateString())} </Modal.Body>
+        <Modal.Body>  {time}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
