@@ -17,7 +17,7 @@ const registerButtonText = <Typography variant="h7">Register</Typography>;
 
 function LoginComponentUser() {
   const [userName, setUserName] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [password, setPassword] = useState("");
   let userNameTextField = (
     <div>
       <TextField
@@ -35,6 +35,7 @@ function LoginComponentUser() {
     <div>
       <TextField
         required
+        type="password"
         id="outlined-required"
         value={password}
         label="password"
